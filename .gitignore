@@ -18,3 +18,5 @@ eval
 *.egg-info
 
 dtu_results.zip
+dtu_results
+output

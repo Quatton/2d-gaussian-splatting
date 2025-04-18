@@ -3,30 +3,22 @@ name = "2d-gaussian-splatting"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 dependencies = [
-    "torch==2.0.0",
-    "torchvision==0.15.0",
-    "torchaudio==2.0.0",
-    "typing-extensions==4.9.0",
-    "pillow==10.2.0",
-    "open3d==0.18.0",
-    "mediapy==1.1.2",
-    "lpips==0.1.4",
-    "scikit-image==0.21.0",
-    "tqdm==4.66.2",
-    "trimesh==4.3.2",
-    "plyfile",
-    "opencv-python"
+  "diff-surfel-rasterization @ ${PROJECT_ROOT}/submodules/diff-surfel-rasterization",
+  "lpips>=0.1.4",
+  "mediapy>=1.2.3",
+  "open3d>=0.19.0",
+  "opencv-python>=4.11.0.86",
+  "scikit-image>=0.25.2",
+  "simple-knn            @ ${PROJECT_ROOT}/submodules/simple-knn",
+  "tqdm>=4.67.1",
+  "trimesh>=4.6.8",
 ]
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "torch>=2.0.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["diff_surfel_rasterization", "simple_knn"]
-
-[tool.setuptools.package-dir]
-diff_surfel_rasterization = "submodules/diff-surfel-rasterization"
-simple_knn = "submodules/simple-knn"
+package-dir = { "" = "submodules" }
