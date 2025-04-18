@@ -16,3 +16,5 @@ eval
 .venv
 
 *.egg-info
+
+dtu_results.zip
