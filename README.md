@@ -1,5 +1,34 @@
 # 2D Gaussian Splatting for Geometrically Accurate Radiance Fields
 
+## Additional Configuration for `uv`
+
+Author: Nutchanon Taechasuk (@Quatton)
+
+I added `pyproject.toml`, and change from conda to uv. 
+Because `build-system.requires` is not set in our submodules, we need to install `numpy` and `torch` manually. 
+```bash
+uv pip install numpy torch
+```
+Then do
+```bash
+uv pip install -e . --no-build-isolation
+```
+
+Everything should work but here are some additional notes:
+
+### libc++ not found
+
+If you encounter the error `libc++ not found`, and the error message says something about `clang++`, you can try to set the `CXX` environment variable to `g++` before running the command. 
+
+```bash
+export CXX=g++
+```
+
+The error is due to the fact that our (CSC) environment has `clang++` version 18 WITHOUT `libc++` installed to the corresponding version. `g++` is at 13 with `libc++` installed at `/13/` so I guess that's why it works.
+
+---
+(Original README below)
+
 [Project page](https://surfsplatting.github.io/) | [Paper](https://arxiv.org/pdf/2403.17888) | [Video](https://www.youtube.com/watch?v=oaHCtB6yiKU) | [Surfel Rasterizer (CUDA)](https://github.com/hbb1/diff-surfel-rasterization) | [Surfel Rasterizer (Python)](https://colab.research.google.com/drive/1qoclD7HJ3-o0O1R8cvV3PxLhoDCMsH8W?usp=sharing) | [DTU+COLMAP (3.5GB)](https://drive.google.com/drive/folders/1SJFgt8qhQomHX55Q4xSvYE2C6-8tFll9) | [SIBR Viewer Pre-built for Windows](https://drive.google.com/file/d/1DRFrtFUfz27QvQKOWbYXbRS2o2eSgaUT/view?usp=sharing) | [Web Viewer](https://github.com/mkkellogg/GaussianSplats3D) <br>
 
 ![Teaser image](assets/teaser.jpg)

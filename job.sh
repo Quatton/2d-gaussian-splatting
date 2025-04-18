@@ -6,7 +6,8 @@
 #SBATCH --gpus 1
 
 source .venv/bin/activate
-python -m pip install -e . --no-build-isolation
+# python -m pip install -e . --no-build-isolation
 
-# python train.py -s dtu_results/mesh/scan105.ply -m output/date/scan105 -r 2 --depth_ratio 1
-# python render.py -r 2 --depth_ratio 1 --skip_test --skip_train
+# Update this path to where you extract the DTU dataset
+python train.py -s DTU/scan105 -m output/2025-04-19/scan105 -r 2 --depth_ratio 1
+# python render.py -m output/2025-04-19/scan105 -r 2 --depth_ratio 1 --skip_test --skip_train

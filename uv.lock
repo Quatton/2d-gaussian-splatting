@@ -16,6 +16,7 @@ dependencies = [
     { name = "mediapy", marker = "python_full_version >= '3.12'" },
     { name = "open3d", marker = "python_full_version >= '3.12'" },
     { name = "opencv-python", marker = "python_full_version >= '3.12'" },
+    { name = "plyfile", marker = "python_full_version >= '3.12'" },
     { name = "scikit-image", marker = "python_full_version >= '3.12'" },
     { name = "simple-knn", marker = "python_full_version >= '3.12'" },
     { name = "tqdm", marker = "python_full_version >= '3.12'" },
@@ -29,6 +30,7 @@ requires-dist = [
     { name = "mediapy", specifier = ">=1.2.3" },
     { name = "open3d", specifier = ">=0.19.0" },
     { name = "opencv-python", specifier = ">=4.11.0.86" },
+    { name = "plyfile", specifier = ">=1.1" },
     { name = "scikit-image", specifier = ">=0.25.2" },
     { name = "simple-knn", directory = "submodules/simple-knn" },
     { name = "tqdm", specifier = ">=4.67.1" },
@@ -1023,6 +1025,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c7/cc/e41b5f697ae403f0b50e47b7af2e36642a193085f553bf7cc1169362873a/plotly-6.0.1.tar.gz", hash = "sha256:dd8400229872b6e3c964b099be699f8d00c489a974f2cfccfad5e8240873366b", size = 8094643 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/02/65/ad2bc85f7377f5cfba5d4466d5474423a3fb7f6a97fd807c06f92dd3e721/plotly-6.0.1-py3-none-any.whl", hash = "sha256:4714db20fea57a435692c548a4eb4fae454f7daddf15f8d8ba7e1045681d7768", size = 14805757 },
+]
+
+[[package]]
+name = "plyfile"
+version = "1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy", marker = "python_full_version >= '3.12'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c9/fb/4e8835e40242f8503e95e523475b7acf158b62a31c94245ccaab30f97e27/plyfile-1.1.tar.gz", hash = "sha256:a49bdf5285c95b6f7d4b9f2954b7867c44f8e13348606d886d8e0a561f6f4671", size = 23541 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/49/ac/3d0ca39b304cbeee43a80ac8ea5ba85576373c00e30fb3e1c5d51bfa7e20/plyfile-1.1-py3-none-any.whl", hash = "sha256:897acde0bbe94af4f6c3866b2c0af2e889ae3533fd5c4f3d3318a0c421fcbe35", size = 23593 },
 ]
 
 [[package]]

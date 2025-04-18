@@ -1,0 +1,24 @@
+Looking for config file in output/2025-04-19/scan105/cfg_args
+Config file found: output/2025-04-19/scan105/cfg_args
+Rendering output/2025-04-19/scan105
+Loading trained model at iteration 7000
+Reading camera 64/64
+Loading Training Cameras
+Loading Test Cameras
+export mesh ...
+reconstruct radiance fields: 64it [00:01, 49.22it/s]
+The estimated bounding radius is 1.91
+Use at least 3.83 for depth_trunc
+Running tsdf volume integration ...
+voxel_size: 0.0037373695402921165
+sdf_trunc: 0.018686847701460584
+depth_truc: 3.8270664092591273
+TSDF integration progress: 64it [00:01, 39.08it/s]
+mesh saved at output/2025-04-19/scan105/train/ours_7000/fuse.ply
+post processing the mesh to have 50 clusterscluster_to_kep
+[Open3D DEBUG] [ClusterConnectedTriangles] Compute triangle adjacency
+[Open3D DEBUG] [ClusterConnectedTriangles] Done computing triangle adjacency
+[Open3D DEBUG] [ClusterConnectedTriangles] Done clustering, #clusters=8577
+num vertices raw 330281
+num vertices post 277230
+mesh post processed saved at output/2025-04-19/scan105/train/ours_7000/fuse_post.ply
